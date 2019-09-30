@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <DebugType>embedded</DebugType>
+        <RootNamespace>Companion.Gateway</RootNamespace>
+        <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="Warning.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Warning.png">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommandLineParser" Version="2.4.3" />
+        <PackageReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Microsoft.AspNetCore.Hosting.WindowsServices" Version="2.1.1" />
+        <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+        <PackageReference Include="Serilog.Formatting.Compact" Version="1.0.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+        <PackageReference Include="Serilog.Sinks.File" Version="4.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Companion.AspNetCore\Companion.AspNetCore.csproj" />
+        <ProjectReference Include="..\Companion.Backend\Companion.Backend.csproj" />
+        <ProjectReference Include="..\Companion.Core\Companion.Core.csproj" />
+        <ProjectReference Include="..\Companion.DataAccess.SqlServer\Companion.DataAccess.SqlServer.csproj" />
+    </ItemGroup>
+</Project>

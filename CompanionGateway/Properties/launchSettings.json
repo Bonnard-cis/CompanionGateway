@@ -1,0 +1,31 @@
+{
+  "profiles": {
+    "CompanionServer": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Chalifoux": {
+      "commandName": "Project",
+      "commandLineArgs": "--data C:\\cis\\CompanionDevChalifoux\\Gateway\\data",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IDFoods": {
+      "commandName": "Project",
+      "commandLineArgs": "--data C:\\CIS\\CompanionDevIDFoods\\Gateway\\data",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "BiscuitsLeclerc": {
+      "commandName": "Project",
+      "commandLineArgs": "--data C:\\CIS\\CompanionDevBiscuitsLeclerc\\Gateway\\data",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
